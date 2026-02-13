@@ -20,7 +20,7 @@ const poundsToKilos = 2.20462;
 mainINPUT.addEventListener("input", function () {
   if (isNaN(mainINPUT.value)) {
     // to reset if you fail to put a number
-    mainINPUT.value = 0;
+    mainINPUT.value = "";
   }
 
   let value = String(mainINPUT.value); // convert to String
