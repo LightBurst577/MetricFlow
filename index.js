@@ -20,7 +20,7 @@ const poundsToKilos = 2.20462;
 mainINPUT.addEventListener("input", function () {
   if (isNaN(mainINPUT.value)) {
     // to reset if you fail to put a number
-    mainINPUT.value = "";
+    mainINPUT.value = 0;
   }
 
   let value = String(mainINPUT.value); // convert to String
@@ -28,11 +28,15 @@ mainINPUT.addEventListener("input", function () {
     // so that the input fild can cap to 2 digit
     mainINPUT.value = value.slice(0, 2);
   }
-  if (value === "") {
+
+  if (value > 100) {
+    value = mainINPUT.value;
+  } else if (value === "") {
     // just in-case if noting in input it will put to 0
     value = 0;
+  } else if (value == "000") {
+    value = mainINPUT.value;
   }
-
   converter.addEventListener("click", function () {
     // all caulation stuff
     lengthEl.textContent = `${value} meter = ${(value * meterToFeet).toFixed(3)}
