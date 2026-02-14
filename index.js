@@ -34,9 +34,11 @@ mainINPUT.addEventListener("input", function () {
   } else if (value === "") {
     // just in-case if noting in input it will put to 0
     value = 0;
-  } else if (value == "000") {
+  } else if (value.length >= 2) {
+    // safe lock to keep the 2 digit value
     value = mainINPUT.value;
   }
+
   converter.addEventListener("click", function () {
     // all caulation stuff
     lengthEl.textContent = `${value} meter = ${(value * meterToFeet).toFixed(3)}
