@@ -3,6 +3,10 @@
 1 liter = 0.264 gallon
 1 kilogram = 2.204 pound
 */
+//css
+const lightModeEL = document.getElementById("lightmode");
+
+//java
 const converter = document.getElementById("Converter");
 let mainINPUT = document.getElementById("mainInput");
 let lengthEl = document.getElementById("Length");
@@ -16,6 +20,18 @@ const kiloToPound = 2.204;
 const feetToMeters = 0.3048;
 const gallonsToLiters = 3.78541;
 const poundsToKilos = 2.20462;
+
+lightModeEL.addEventListener("click", function () {
+  const isLightMode = document.body.classList.toggle("light-mode");
+
+  if (isLightMode) {
+    lightModeEL.textContent = "Dark Mode";
+    console.log("Status: Light Mode (True)");
+  } else {
+    lightModeEL.textContent = "Light Mode";
+    console.log("Status: Light Mode (False)");
+  }
+});
 
 mainINPUT.addEventListener("input", function () {
   if (isNaN(mainINPUT.value)) {
