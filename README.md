@@ -1,4 +1,4 @@
-Hello! I made this project in Scrimba
+I made this project in Scrimba https://metricflow9000.netlify.app/
 This Metric/Imperial Unit Converter is a responsive web app designed to take the guesswork out of unit switching. 
 
 ## About Scrimba
